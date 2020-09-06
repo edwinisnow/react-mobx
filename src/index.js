@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ShoppingCart } from './stores/shopping-cart';
-
+import { Provider } from 'mobx-react'
 
 const shoppingCart = new ShoppingCart()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App store={shoppingCart} />
+    <Provider store={shoppingCart}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

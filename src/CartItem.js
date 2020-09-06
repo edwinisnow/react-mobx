@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { observer } from 'mobx-react'
-
+import { observer, inject } from 'mobx-react'
+@inject('store')
 @observer
 class CartItem extends React.Component {
     render() {

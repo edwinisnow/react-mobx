@@ -1,6 +1,7 @@
 import * as React from 'react'
-
-export class ItemForm extends React.Component {
+import { inject } from 'mobx-react'
+@inject('store')
+class ItemForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -44,3 +45,4 @@ export class ItemForm extends React.Component {
         </form>)
     }
 }
+export default ItemForm;
