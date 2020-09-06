@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { observer, inject } from 'mobx-react'
+import { Table } from 'reactstrap';
 @inject('store')
 @observer
 class CartItem extends React.Component {
     render() {
-        return (<table>
+        return (<Table>
             <thead>
                 <tr>
                     <th>Name</th>
@@ -25,7 +26,9 @@ class CartItem extends React.Component {
                     <td>{this.props.store.totalPrice}</td>
                 </tr>
             </tfoot>
-        </table>)
+        </Table>)
     }
 }
 export default CartItem;
+
+
